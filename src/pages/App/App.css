@@ -3,7 +3,20 @@ body {
     font-family: sans-serif;
 }
 
-btn-black {
+.btn-black {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: black;
     color: white;
+    padding: 8px 20px;
 }
+
+
+
+@media (min-width: 576px) {
+    .btn-black {
+        padding: 8px 20px !important;
+    }
+}
+    
