@@ -17,23 +17,8 @@ body {
     border-radius: 8px;
 }
 
-.navbar-brand-wrap {
-    font-weight: 600;
-    text-decoration: none;
-}
+.grid {
 
-.navbar-nav {
- justify-content: flex-end;   
- align-items: center;
- gap: 4%; 
-}
-
-.nav-link {
-    font-weight: 600;
-}
-
-.navbar {
-    padding: 20px 25px;
 }
 
 
