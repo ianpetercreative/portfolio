@@ -16,7 +16,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    background-color: rgb(29, 29, 29);
     color: white;
     font-weight: 500;
     width: auto;
@@ -35,9 +35,9 @@ h1 {
     color: white;
 }
 
-.btn-black-jumbo:hover {
+.btn-black-jumbo:hover, .btn-black:hover {
     color: white;
-    background-color: rgb(29, 29, 29);
+    background-color: black;
 }
 
 .work-grid {
@@ -49,21 +49,27 @@ h1 {
 
 .work-card {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-end;
+    align-items: flex-start;
     position: relative;
-    background-color: red;
     height: 600px;
     border: none;
     border-radius: 15px;
     overflow: hidden;
+    background: linear-gradient(rgba(0, 0, 0, 0) 66%, rgba(0, 0, 0, 0.8));
+    padding: 25px;
+    color: white;
+    text-decoration: none;
 }
 
 .work-card img {
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    z-index: -1;
 }
 
 @media (min-width: 576px) {

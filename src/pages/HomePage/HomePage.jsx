@@ -15,7 +15,7 @@ export default function HomePage() {
                     <div>
                         <h2>reHomr</h2>
                         <h3>A custom built pet adoption platform</h3>
-                        <img src="images/rehomr/web-screenshots/home.png" alt="rehomr landing page" />
+                        <img src="images/rehomr/xan-griffin-UCFgM_AojFg-unsplash.jpg" alt="rehomr landing page" />
                     </div>
                 </Link>
                 <Link to="/"></Link>
