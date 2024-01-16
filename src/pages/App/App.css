@@ -49,17 +49,28 @@ h1 {
 
 .work-card {
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     position: relative;
     height: 600px;
     border: none;
     border-radius: 15px;
     overflow: hidden;
-    background: linear-gradient(rgba(0, 0, 0, 0) 66%, rgba(0, 0, 0, 0.8));
-    padding: 25px;
     color: white;
     text-decoration: none;
+    background-color: transparent;
+}
+
+.work-card-gradient {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 25px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(51, 170, 255, 0) 55%, rgba(51, 170, 255, 1) 95%);
 }
 
 .work-card img {
