@@ -26,9 +26,10 @@ export default function NavBar() {
                         </Offcanvas.Header>
                         <Offcanvas.Body>
                             <Nav className="flex-grow-1">
+                                <Link to="/" className="nav-link">Home</Link>
                                 <Link to="/about" className="nav-link">About</Link>
+                                <Link to="/work" className="nav-link">Work</Link>
                                 <Link to="/contact" className="nav-link">Contact</Link>
-                                <Link to="/work" className="nav-link btn btn-black">View Work</Link>
                             </Nav>
                         </Offcanvas.Body>
                     </Navbar.Offcanvas>
