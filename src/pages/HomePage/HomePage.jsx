@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Container } from 'react-bootstrap';
+import { Container, Card } from 'react-bootstrap';
 import './HomePage.css'
 
 export default function HomePage() {
@@ -18,9 +18,23 @@ export default function HomePage() {
             <div className="home-about">
                 <Container>
                     <h1>About Me</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora consectetur necessitatibus excepturi nam eius velit vero soluta at? Repellendus necessitatibus et consectetur cupiditate ea dolores ducimus aliquam quam ipsum odio?
-                        Culpa atque recusandae fuga ipsa iure molestiae non vero natus architecto sequi! At illo laborum eaque odit eligendi hic quo tempore, aut incidunt omnis dolor in dicta cupiditate expedita pariatur.</p>
-                    <Link to="/about">Learn More</Link>
+                    <p>
+                        With a background in project management and the creative field, I excel in detailed planning and intuitive design. My diverse roles in marketing and service industries involved managing creative projects for various audiences and stakeholders. I've completed 500+ hours of expert-led software engineering instruction, combining technical knowledge with practical skills.
+
+                    </p>
+                    <p>
+                        "ianpetercreative" has been my freelancing identity since 2017, spanning photography, videography, graphic design, live event producing, and photo editing. Let's connect if you're seeking a versatile professional for your team or simply want to chat!
+                    </p>
+                    <Link to="/about" className="button-outline-white">Learn More</Link>
+                </Container>
+            </div>
+            <div className="home-projects">
+                <h1>Projects</h1>
+                <Container>
+                    <Card>This is a card</Card>
+                    <Card>This is a card</Card>
+                    <Card>This is a card</Card>
+                    <Card>This is a card</Card>
                 </Container>
             </div>
         </>

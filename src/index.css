@@ -11,3 +11,20 @@ body {
   margin: 0;
 }
 
+.button-outline-white {
+  color: white;
+  border: 2px solid white;
+  width: fit-content;
+  padding: 7px 12px;
+  border-radius: 5px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-decoration: none;
+  align-self: center;
+  transition: 0.25s ease;
+}
+
+.button-outline-white:hover {
+  background-color: white;
+  color: black;
+}
