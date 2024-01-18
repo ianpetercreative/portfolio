@@ -1,7 +1,9 @@
 :root {
-  --black: #242424;
+  --black: #00171f;
+  --blue: #00a7e1;
 }
 
 body {
   margin: 0;
 }
+
