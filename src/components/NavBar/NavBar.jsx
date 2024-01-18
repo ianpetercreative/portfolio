@@ -11,7 +11,7 @@ export default function NavBar() {
     const isAboutPage = location.pathname === '/about';
     const isWorkPage = location.pathname === '/work';
     const isContactPage = location.pathname === '/contact'
-    
+
     return (
         <>
             <Navbar key="sm" expand="sm" className="mb-3">
@@ -33,16 +33,16 @@ export default function NavBar() {
                         <Offcanvas.Body>
                             <Nav className="flex-grow-1">
                                 <Nav.Item>
-                                    <Link to="/" className="nav-link">Home</Link>
+                                    <Link to="/" className={`nav-link ${isHomePage ? 'active' : ''}`}>Home</Link>
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <Link to="/about" className="nav-link">About</Link>
+                                    <Link to="/about" className={`nav-link ${isAboutPage ? 'active' : ''}`}>About</Link>
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <Link to="/work" className="nav-link">Work</Link>
+                                    <Link to="/work" className={`nav-link ${isWorkPage ? 'active' : ''}`}>Work</Link>
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <Link to="/contact" className="nav-link">Contact</Link>
+                                    <Link to="/contact" className={`nav-link ${isContactPage ? 'active' : ''}`}>Contact</Link>
                                 </Nav.Item>
                             </Nav>
                         </Offcanvas.Body>
