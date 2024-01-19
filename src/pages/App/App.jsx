@@ -2,6 +2,7 @@ import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
 import { Route, Routes } from "react-router-dom"
 import NavBar from '../../components/NavBar/NavBar';
+import Footer from '../../components/Footer/Footer';
 import HomePage from '../HomePage/HomePage';
 import AboutPage from '../AboutPage/AboutPage'
 import WorkIndexPage from '../WorkIndexPage/WorkIndexPage'
@@ -13,15 +14,16 @@ export default function App() {
   return (
     <>
       <main className="App">
-          <>
-          <NavBar /> 
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/work" element={<WorkIndexPage />} />
-              <Route path="/contact" element={<ContactPage />} />
-            </Routes>
-          </>
+        <>
+          <NavBar />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/work" element={<WorkIndexPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+          </Routes>
+          <Footer />
+        </>
       </main>
     </>
   );
