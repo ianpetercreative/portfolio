@@ -31,7 +31,19 @@ export default function HomePage() {
             <div className="home-projects">
                 <h1>Projects</h1>
                 <Container>
-                    <Card>This is a card</Card>
+                    <Link>
+                        <Card>
+                            <Card.Img variant="top" src="images/rehomr/web-screenshots/home.png" />
+                            <Card.Body>
+                                <Card.Title>
+                                    reHomr
+                                </Card.Title>
+                                <Card.Text>
+                                    A web application designed to streamline the pet adoption process.
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                    </Link>
                     <Card>This is a card</Card>
                     <Card>This is a card</Card>
                     <Card>This is a card</Card>

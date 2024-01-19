@@ -84,3 +84,14 @@
     gap: 35px;
     width: 75%;
 }
+
+.card .card-title, .card .card-text {
+    text-decoration: none;
+}
+
+.card {
+    transition: 0.25s ease;
+}
+.card:hover {
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.3);
+}
