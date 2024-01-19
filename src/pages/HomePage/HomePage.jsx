@@ -44,9 +44,43 @@ export default function HomePage() {
                             </Card.Body>
                         </Card>
                     </Link>
-                    <Card>This is a card</Card>
-                    <Card>This is a card</Card>
-                    <Card>This is a card</Card>
+                    <Link>
+                        <Card>
+                            <Card.Img variant="top" src="images/simmr/landing-page.png" />
+                            <Card.Body>
+                                <Card.Title>
+                                    Simmr
+                                </Card.Title>
+                                <Card.Text>
+                                    A web application for sharing and reviewing your favorite recipes.
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                    </Link>
+                    <Link>
+                        <Card>
+                            <Card.Img variant="top" src="images/trailhead/show-1.png" />
+                            <Card.Body>
+                                <Card.Title>
+                                    The Trailhead
+                                </Card.Title>
+                                <Card.Text>
+                                A web application that helps outdoor enthusiasts discover and share their favorite hiking trails.                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                    </Link>
+                    <Link>
+                        <Card>
+                            <Card.Img variant="top" src="images/checkers/starting-position.png" />
+                            <Card.Body>
+                                <Card.Title>
+                                    Checkers
+                                </Card.Title>
+                                <Card.Text>
+                                A digital rendition of the classic two-player strategy board game.                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                    </Link>
                 </Container>
             </div>
         </>
