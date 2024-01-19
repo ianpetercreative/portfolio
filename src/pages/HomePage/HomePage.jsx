@@ -20,7 +20,6 @@ export default function HomePage() {
                     <h1>About Me</h1>
                     <p>
                         With a background in project management and the creative field, I excel in detailed planning and intuitive design. My diverse roles in marketing and service industries involved managing creative projects for various audiences and stakeholders. I've completed 500+ hours of expert-led software engineering instruction, combining technical knowledge with practical skills.
-
                     </p>
                     <p>
                         "ianpetercreative" has been my freelancing identity since 2017, spanning photography, videography, graphic design, live event producing, and photo editing. Let's connect if you're seeking a versatile professional for your team or simply want to chat!
@@ -31,7 +30,7 @@ export default function HomePage() {
             <div className="home-projects">
                 <h1>Projects</h1>
                 <Container>
-                    <Link>
+                    <Link to="/work/rehomr">
                         <Card>
                             <Card.Img variant="top" src="images/rehomr/web-screenshots/home.png" />
                             <Card.Body>
@@ -44,7 +43,19 @@ export default function HomePage() {
                             </Card.Body>
                         </Card>
                     </Link>
-                    <Link>
+                    <Link to="/work/trailhead">
+                        <Card>
+                            <Card.Img variant="top" src="images/trailhead/show-1.png" />
+                            <Card.Body>
+                                <Card.Title>
+                                    The Trailhead
+                                </Card.Title>
+                                <Card.Text>
+                                    A web application that helps outdoor enthusiasts discover and share their favorite hiking trails.                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                    </Link>
+                    <Link to="/work/simmr">
                         <Card>
                             <Card.Img variant="top" src="images/simmr/landing-page.png" />
                             <Card.Body>
@@ -57,19 +68,7 @@ export default function HomePage() {
                             </Card.Body>
                         </Card>
                     </Link>
-                    <Link>
-                        <Card>
-                            <Card.Img variant="top" src="images/trailhead/show-1.png" />
-                            <Card.Body>
-                                <Card.Title>
-                                    The Trailhead
-                                </Card.Title>
-                                <Card.Text>
-                                A web application that helps outdoor enthusiasts discover and share their favorite hiking trails.                                </Card.Text>
-                            </Card.Body>
-                        </Card>
-                    </Link>
-                    <Link>
+                    <Link to="/work/checkers">
                         <Card>
                             <Card.Img variant="top" src="images/checkers/starting-position.png" />
                             <Card.Body>
@@ -77,7 +76,7 @@ export default function HomePage() {
                                     Checkers
                                 </Card.Title>
                                 <Card.Text>
-                                A digital rendition of the classic two-player strategy board game.                                </Card.Text>
+                                    A digital rendition of the classic two-player strategy board game.                                </Card.Text>
                             </Card.Body>
                         </Card>
                     </Link>

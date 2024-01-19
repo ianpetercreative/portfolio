@@ -10,12 +10,21 @@ body {
 
 .card {
     transition: 0.25s ease;
+    height: 100%;
 }
 .card:hover {
-    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 15px 0 rgba(0, 0, 0, 0.3);
+}
+
+.card-img-top {
+    height: 75%;
 }
 
 .card-title.h5 {
     font-size: 1.5rem;
     font-weight: 700;
+}
+
+.card .card-img-top {
+    object-fit: cover;
 }
