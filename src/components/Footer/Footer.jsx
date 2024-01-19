@@ -8,12 +8,6 @@ export default function Footer() {
         <>
             <footer>
                 <Container>
-                    <div className="left">
-                        <div className="">
-                            <Link to="/">
-                                <h4>ianpetercreative</h4>
-                            </Link>
-                        </div>
                         <div className="socials">
                             <Link to="#">
                                 <FaLinkedin className="social-icon" />
@@ -25,14 +19,13 @@ export default function Footer() {
                                 <FaInstagram className="social-icon" />
                             </Link>
                         </div>
-                    </div>
-                    <div className="right">
-
+                    <div className="links">
+                        <Link to="/" className="footer-link">Home</Link>
+                        <Link to="/about" className="footer-link">About</Link>
+                        <Link to="/work" className="footer-link">Work</Link>
+                        <Link to="/contact" className="footer-link">Contact</Link>
                     </div>
                 </Container>
-                <div className="text-center mt-3">
-                    &copy; 2024 ianpetercreative. All rights reserved.
-                </div>
             </footer>
         </>
     )
