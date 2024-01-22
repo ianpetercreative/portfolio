@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { Form, Button } from 'react-bootstrap'
+import { Form  } from 'react-bootstrap'
+import axios from 'axios'
 
 export default function ContactForm() {
     const [formData, setFormData] = useState({
@@ -7,7 +8,8 @@ export default function ContactForm() {
         email: '',
         message: '',
     })
-    const [error, setError] = useState("")
+    const [errorMsg, setErrorMsg] = useState("")
+    const [successMsg, setSuccessMsg] = useState("")
 
     function handleChange(evt) {
         const { name, value } = evt.target;
@@ -17,13 +19,20 @@ export default function ContactForm() {
         });
     };
 
-    function handleSubmit(evt) {
+    async function handleSubmit(evt) {
         evt.preventDefault();
         console.log('Form Submitted: ', formData)
         try{
-
+        
+            await axios.post('/send-email', formData);
+            setSuccessMsg("Email sent successfully.")
+            setFormData({
+                name: '',
+                email: '',
+                message: '',
+            })
         } catch (err) {
-            setError(err)
+            setErrorMsg(err.message)
         }
     }
     return (
@@ -70,6 +79,8 @@ export default function ContactForm() {
                     Submit
                 </Button> */}
             </Form>
+            <p>{successMsg}</p>
+            <p>{errorMsg}</p>
         </>
     )
 }
