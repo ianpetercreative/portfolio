@@ -7,6 +7,7 @@ export default function ContactForm() {
         email: '',
         message: '',
     })
+    const [error, setError] = useState("")
 
     function handleChange(evt) {
         const { name, value } = evt.target;
@@ -19,6 +20,11 @@ export default function ContactForm() {
     function handleSubmit(evt) {
         evt.preventDefault();
         console.log('Form Submitted: ', formData)
+        try{
+
+        } catch (err) {
+            setError(err)
+        }
     }
     return (
         <>

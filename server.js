@@ -15,31 +15,7 @@ app.use(express.urlencoded({extended: true}));
 app.use(favicon(path.join(__dirname, 'build', 'favicon.ico')));
 app.use(express.static(path.join(__dirname, 'build')));
 
-app.post('send-email', (req, res) => {
-    const { name, email, message } = req.body;
-
-    const transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-            user: 'ianpetercreative@gmail.com',
-            pass: '***',
-        }
-    });
-
-    const mailOptions = {
-        from: email, 
-        to: 'ianpetercreative@gmail.com',
-        subject: 'New Contact Form Submission',
-        text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
-    }
-
-    transporter.sendMail(mailOptions, (error, info) => {
-        if (error) {
-            return res.status(500).send(error.toString());
-        }
-        return res.status(200).send('Email sent: ' + info.response)
-    })
-})
+app.post('/send-email', require('./routes/contact'))
 
 app.get('/*', function (req, res) {
     res.sendFile(path.join(__dirname, 'build', 'index.html'));
