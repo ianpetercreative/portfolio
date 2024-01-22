@@ -59,10 +59,10 @@ export default function ContactForm() {
                         required
                     />
                 </Form.Group>
-
-                <Button variant="primary" type="submit">
+                <button className="button-blue" type="submit">Submit</button>
+                {/* <Button variant="primary" className="button-blue" type="submit">
                     Submit
-                </Button>
+                </Button> */}
             </Form>
         </>
     )
