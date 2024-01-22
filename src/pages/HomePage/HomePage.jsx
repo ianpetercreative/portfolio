@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { Container, Card } from 'react-bootstrap';
 import './HomePage.css'
+import ContactForm from '../../components/ContactForm/ContactForm'
 
 export default function HomePage() {
     return (
@@ -80,6 +81,12 @@ export default function HomePage() {
                             </Card.Body>
                         </Card>
                     </Link>
+                </Container>
+            </div>
+            <div className="home-contact">
+                <Container>
+                    <h1>Contact</h1>
+                    <ContactForm /> 
                 </Container>
             </div>
         </>
