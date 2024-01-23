@@ -9,15 +9,15 @@ export default function Footer() {
             <footer>
                 <Container>
                         <div className="socials">
-                            <Link to="#">
+                            <a href="https://www.linkedin.com/in/ianpetercreative/" target="_blank" rel="noreferrer">
                                 <FaLinkedin className="social-icon" />
-                            </Link>
-                            <Link to="#">
+                            </a>
+                            <a href="https://github.com/ianpetercreative" target="_blank" rel="noreferrer">
                                 <FaGithub className="social-icon" />
-                            </Link>
-                            <Link to="#">
+                            </a>
+                            <a href="https://www.instagram.com/ianpetercreative" target="_blank" rel="noreferrer">
                                 <FaInstagram className="social-icon" />
-                            </Link>
+                            </a>
                         </div>
                     <div className="links">
                         <Link to="/" className="footer-link">Home</Link>

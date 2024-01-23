@@ -1,0 +1,90 @@
+.about-hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 125px;
+    margin-bottom: 125px;
+    width: 75%;
+}
+
+.about-hero-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.about-hero-info > h1 {
+    font-size: 5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.about-hero-info > div {
+    font-size: 2rem;
+    width: 90%;
+}
+
+.about-hero-info span {
+    text-decoration: underline var(--blue);
+}
+
+.about-hero-info > p {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: rgb(160, 160, 160);
+}
+
+.about-hero-img {
+    width: 90%;
+    height: 0;
+    padding-bottom: 90%; 
+    overflow: hidden;
+    position: relative;
+}
+
+.about-hero-img>img {
+    width: 100%;
+    height: 110%;
+    object-fit: cover;
+
+    position: absolute;
+    bottom: 0; 
+    left: 0; 
+}
+
+.about-journey {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin-bottom: 75px;
+}
+
+.about-journey h1, .about-contact h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 25px 0;
+}
+
+.about-journey p {
+    width: 75%;
+    align-self: center;
+    font-size: 1.3rem;
+}
+
+.about-contact .container {
+    width: 75%;
+}
+
+.about-journey .socials {
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+}
+
+.about-journey .social-icon {
+    color: black;
+    height: 24px;
+    width: 24px;
+}
