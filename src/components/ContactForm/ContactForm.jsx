@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Form  } from 'react-bootstrap'
+import { Form } from 'react-bootstrap'
 
 export default function ContactForm() {
     const [formFields, setFormFields] = useState({
@@ -73,7 +73,7 @@ export default function ContactForm() {
                     <Form.Label>Message</Form.Label>
                     <Form.Control
                         as="textarea"
-                        rows={4}
+                        rows={10}
                         placeholder="Type your message here"
                         name="message"
                         value={formFields.message}
