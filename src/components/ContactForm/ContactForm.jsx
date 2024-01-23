@@ -2,23 +2,44 @@ import { useState } from 'react'
 import { Form  } from 'react-bootstrap'
 
 export default function ContactForm() {
-    const [formData, setFormData] = useState({
+    const [formFields, setFormFields] = useState({
         name: '',
         email: '',
         message: '',
     })
 
+    const [result, setResult] = useState('')
+
     function handleChange(evt) {
         const { name, value } = evt.target;
-        setFormData({
-            ...formData,
+        setFormFields({
+            ...formFields,
             [name]: value,
         });
     };
 
     async function handleSubmit(evt) {
         evt.preventDefault();
-        console.log('Form Submitted: ', formData)
+        console.log('Form Submitted: ', formFields)
+        setResult('Sending...');
+        const formData = new FormData(evt.target);
+        formData.append('access_key', process.env.REACT_APP_WEB3FORMS_ACCESS_KEY)
+
+        const res = await fetch("https://api.web3forms.com/submit", {
+            method: 'POST',
+            body: formData
+        }).then(res => res.json());
+
+        if (res.success) {
+            setResult(res.message);
+            setFormFields({
+                name: '',
+                email: '',
+                message: ''
+            })
+        } else {
+            setResult(res.message); 
+        }
     }
 
     return (
@@ -30,7 +51,7 @@ export default function ContactForm() {
                         type="text"
                         placeholder="Enter your name"
                         name="name"
-                        value={formData.name}
+                        value={formFields.name}
                         onChange={handleChange}
                         required
                     />
@@ -42,7 +63,7 @@ export default function ContactForm() {
                         type="email"
                         placeholder="Enter your email"
                         name="email"
-                        value={formData.email}
+                        value={formFields.email}
                         onChange={handleChange}
                         required
                     />
@@ -55,13 +76,15 @@ export default function ContactForm() {
                         rows={4}
                         placeholder="Type your message here"
                         name="message"
-                        value={formData.message}
+                        value={formFields.message}
                         onChange={handleChange}
                         required
                     />
                 </Form.Group>
                 <button className="button-blue" type="submit">Submit</button>
             </Form>
+            <br />
+            <span>{result}</span>
         </>
     )
 }
