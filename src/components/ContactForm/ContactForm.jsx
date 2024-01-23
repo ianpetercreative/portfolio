@@ -62,8 +62,6 @@ export default function ContactForm() {
                 </Form.Group>
                 <button className="button-blue" type="submit">Submit</button>
             </Form>
-            <p>{successMsg}</p>
-            <p>{errorMsg}</p>
         </>
     )
 }
