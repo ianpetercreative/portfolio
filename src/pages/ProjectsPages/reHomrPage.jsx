@@ -1,5 +1,7 @@
 import './Projects.css'
 import { Container } from "react-bootstrap";
+import { Link } from 'react-router-dom';
+
 export default function ReHomrPage() {
     return (
         <>
@@ -25,7 +27,7 @@ export default function ReHomrPage() {
                                     <li>JavaScript</li>
                                 </ul>
                                 <ul>
-                                <h2>Backend</h2>
+                                    <h2>Backend</h2>
                                     <li>Node.js</li>
                                     <li>Express.js</li>
                                     <li>MongoDB</li>
@@ -33,7 +35,7 @@ export default function ReHomrPage() {
                             </div>
                             <div className="tech-used-2">
                                 <ul>
-                                <h2>Other Tools</h2>
+                                    <h2>Other Tools</h2>
                                     <li>Bootstrap</li>
                                     <li>AJAX/Axios</li>
                                     <li>Trello</li>
@@ -43,8 +45,11 @@ export default function ReHomrPage() {
                                 </ul>
                             </div>
                         </div>
-
                     </div>
+                </div>
+                <div className='project-buttons'>
+                    <a className='button-blue' href="https://rehomr-58ea4d4dc5ca.herokuapp.com/">Deployed Site</a>
+                    <a className='button-blue' href="https://github.com/ianpetercreative/rehomr">Github</a>
                 </div>
                 <div className="project-screenshots">
                     <h1>Web Screenshots</h1>
@@ -69,13 +74,20 @@ export default function ReHomrPage() {
                         <img src="/images/rehomr/mobile-screenshots/mobile-pets-available2.png" alt="mobile pets list 2" />
                     </div>
                 </div>
+                <hr />
                 <div className='project-buttons'>
-
-                </div>
-                <div className='project-nav'>
-
+                    <a className='button-blue' href="https://rehomr-58ea4d4dc5ca.herokuapp.com/">Deployed Site</a>
+                    <a className='button-blue' href="https://github.com/ianpetercreative/rehomr">Github</a>
                 </div>
             </Container>
+                <div className='project-nav'>
+                    <Link to="/work/checkers">
+                        <div className='nav-arrow'>&larr; Checkers</div>
+                    </Link>
+                    <Link to="/work/simmr">
+                        <div className='nav-arrow'>Simmr &rarr;</div>
+                    </Link>
+                </div>
         </>
     );
 }
