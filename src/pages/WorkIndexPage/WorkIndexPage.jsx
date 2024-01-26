@@ -17,7 +17,8 @@ export default function WorkIndexPage() {
                                     Checkers
                                 </Card.Title>
                                 <Card.Text>
-                                    A digital rendition of the classic two-player strategy board game.                                </Card.Text>
+                                    A digital rendition of the classic two-player strategy board game.
+                                </Card.Text>
                             </Card.Body>
                         </Card>
                     </Link>
@@ -55,7 +56,8 @@ export default function WorkIndexPage() {
                                     The Trailhead
                                 </Card.Title>
                                 <Card.Text>
-                                    A web application that helps outdoor enthusiasts discover and share their favorite hiking trails.                                </Card.Text>
+                                    A web application that helps outdoor enthusiasts discover and share their favorite hiking trails.
+                                </Card.Text>
                             </Card.Body>
                         </Card>
                     </Link>
