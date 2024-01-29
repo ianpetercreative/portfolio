@@ -69,3 +69,17 @@ footer .links {
     font-size: 1.2rem;
     font-weight: 600;
 }
+
+@media (max-width: 576px){
+    footer .container {
+        flex-direction: column-reverse;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-link {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+}
