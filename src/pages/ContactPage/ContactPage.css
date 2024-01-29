@@ -35,3 +35,23 @@
     height: 40px;
     width: 40px;
 }
+
+@media (max-width: 575.8px){
+    .contact-hero h1 {
+        font-size: 3rem;
+    }
+
+    .contact-form-wrap {
+        width: 90%;
+    }
+
+    .contact-socials {
+        gap: 15px;
+    }
+
+    .contact-socials .social-icon {
+        color: black;
+        height: 24px;
+        width: 24px;
+    }
+}
