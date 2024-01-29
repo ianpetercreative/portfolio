@@ -88,3 +88,52 @@
     height: 24px;
     width: 24px;
 }
+
+
+@media (max-width: 991.8px){
+    .about-hero {
+        grid-template-columns: 1fr;
+        width: 90%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .about-hero-img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .about-contact .container {
+        width: 90%;
+    }
+
+    .about-journey {
+        width: 90%;
+    }
+
+    .about-journey p {
+        width: 90%;
+    }
+
+    .about-journey h1, .about-contact h1 {
+        font-size: 3rem;
+    }
+}
+
+
+@media (max-width: 575.8px) {
+    .about-hero-info > h1 {
+        font-size: 4rem;
+        font-weight: 700;
+        margin: 0;
+    }
+    
+    .about-hero-info > div {
+        font-size: 1.7rem;
+        width: 100%;
+    }
+    
+    .about-hero-info > p {
+        font-size: 1.2rem;
+    }   
+}
