@@ -2,8 +2,13 @@ import { Link } from 'react-router-dom'
 import { Container, Card } from 'react-bootstrap';
 import './HomePage.css'
 import ContactForm from '../../components/ContactForm/ContactForm'
+import { useEffect } from 'react';
 
 export default function HomePage() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
+
     return (
         <>
             <Container className="home-hero">

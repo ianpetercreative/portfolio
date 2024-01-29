@@ -1,8 +1,13 @@
 import { Link } from 'react-router-dom'
 import { Container, Card } from 'react-bootstrap';
 import './WorkIndexPage.css'
+import { useEffect } from 'react';
 
 export default function WorkIndexPage() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
+
     return (
         <>
             <div className="projects-wrap">

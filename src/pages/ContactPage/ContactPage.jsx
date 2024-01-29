@@ -2,9 +2,14 @@ import ContactForm from "../../components/ContactForm/ContactForm";
 import { Container } from 'react-bootstrap'
 import './ContactPage.css'
 import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa';
+import { useEffect } from "react";
 
 
 export default function ContactPage() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
+
     return (
         <>
             <Container className="contact-hero">

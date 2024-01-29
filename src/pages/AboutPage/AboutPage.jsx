@@ -2,9 +2,14 @@ import { Container } from 'react-bootstrap';
 import './AboutPage.css'
 import ContactForm from '../../components/ContactForm/ContactForm';
 import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa';
+import { useEffect } from 'react';
 
 
 export default function AboutPage() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
+
     return (
         <>
             <Container className="about-hero">

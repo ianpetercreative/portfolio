@@ -1,8 +1,13 @@
 import './Projects.css'
 import { Container } from "react-bootstrap";
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
 export default function ReHomrPage() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
+      
     return (
         <>
             <Container>
