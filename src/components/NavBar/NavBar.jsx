@@ -4,6 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { Link, useLocation } from 'react-router-dom';
 import './NavBar.css'
+import { useRef, useState } from 'react';
 
 export default function NavBar() {
     const location = useLocation();
@@ -12,6 +13,23 @@ export default function NavBar() {
     const isWorkPage = location.pathname === '/work';
     const isContactPage = location.pathname === '/contact'
 
+    const [offCanvasNav, setOffCanvasNav] = useState(false)
+    const offcanvasRef = useRef();
+
+    function handleToggle(){
+        setOffCanvasNav(!offCanvasNav)
+    }
+
+    function handleCloseNav(){
+        setOffCanvasNav(false)
+    }
+
+    const handleCloseOffcanvas = () => {
+      if (offcanvasRef.current) {
+        offcanvasRef.current.hide();
+      }
+    };
+
     return (
         <>
             <Navbar key="sm" expand="sm" className="mb-3">
@@ -19,11 +37,13 @@ export default function NavBar() {
                     <Link className="navbar-brand-wrap" to="/">
                         <Navbar.Brand>ianpetercreative</Navbar.Brand>
                     </Link>
-                    <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-sm`} />
+                    <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-sm`} onClick={handleToggle} />
                     <Navbar.Offcanvas
                         id={`offcanvasNavbar-expand-sm`}
                         aria-labelledby={`offcanvasNavbarLabel-expand-sm`}
                         placement="end"
+                        show={offCanvasNav}
+                        onHide={handleCloseOffcanvas}
                     >
                         <Offcanvas.Header closeButton>
                             <Offcanvas.Title id={`offcanvasNavbarLabel-expand-sm`}>
@@ -33,16 +53,28 @@ export default function NavBar() {
                         <Offcanvas.Body>
                             <Nav className="flex-grow-1">
                                 <Nav.Item>
-                                    <Link to="/" className={`nav-link ${isHomePage ? 'active' : ''}`}>Home</Link>
+                                    <Link to="/" 
+                                    className={`nav-link ${isHomePage ? 'active' : ''}`}
+                                    onClick={handleToggle}
+                                    >Home</Link>
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <Link to="/about" className={`nav-link ${isAboutPage ? 'active' : ''}`}>About</Link>
+                                    <Link to="/about" 
+                                    className={`nav-link ${isAboutPage ? 'active' : ''}`}
+                                    onClick={handleToggle}
+                                    >About</Link>
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <Link to="/work" className={`nav-link ${isWorkPage ? 'active' : ''}`}>Work</Link>
+                                    <Link to="/work" 
+                                    className={`nav-link ${isWorkPage ? 'active' : ''}`}
+                                    onClick={handleToggle}
+                                    >Work</Link>
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <Link to="/contact" className={`nav-link ${isContactPage ? 'active' : ''}`}>Contact</Link>
+                                    <Link to="/contact" 
+                                    className={`nav-link ${isContactPage ? 'active' : ''}`}
+                                    onClick={handleToggle}
+                                    >Contact</Link>
                                 </Nav.Item>
                             </Nav>
                         </Offcanvas.Body>

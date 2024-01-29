@@ -96,8 +96,8 @@
 @media (max-width: 991.8px) {
     .home-hero {
         grid-template-columns: 1fr;
-        margin-top: 50px;
-        margin-bottom: 50px;
+        margin-top: 35px;
+        margin-bottom: 100px;
         width: 90%;
     }
 
