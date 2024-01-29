@@ -102,3 +102,26 @@
 .nav-arrow:hover {
     color: var(--blue);
 }
+
+@media (max-width: 991.8px){
+    .project-details {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .web-screenshots {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 575.8px){
+    .project-details {
+        width: 90%;
+        margin: 50px auto;
+    }
+
+    .tech-list {
+        flex-direction: column;
+        gap: 0;
+    }
+}
