@@ -29,3 +29,15 @@
 .projects-wrap {
     margin-bottom: 75px;
 }
+
+@media (max-width: 991.8px){
+    .projects-wrap h1 {
+        font-size: 3rem;
+    }
+
+    .projects-wrap .container {
+        grid-template-columns: 1fr;
+        width: 90%;
+        margin: 50px auto;
+    }
+}
