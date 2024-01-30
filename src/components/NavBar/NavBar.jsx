@@ -3,6 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { Link, useLocation } from 'react-router-dom';
+import { useMediaQuery } from 'react-responsive';
 import './NavBar.css'
 import { useRef, useState } from 'react';
 
@@ -16,19 +17,17 @@ export default function NavBar() {
     const [offCanvasNav, setOffCanvasNav] = useState(false)
     const offcanvasRef = useRef();
 
-    function handleToggle(){
-        setOffCanvasNav(!offCanvasNav)
+    const isMobileScreen = useMediaQuery({ query: '(max-width: 576px)' });
+
+    function handleToggle() {
+        if (isMobileScreen) {
+            setOffCanvasNav(!offCanvasNav);
+        }
     }
 
-    function handleCloseNav(){
+    function handleCloseNav() {
         setOffCanvasNav(false)
     }
-
-    const handleCloseOffcanvas = () => {
-      if (offcanvasRef.current) {
-        offcanvasRef.current.hide();
-      }
-    };
 
     return (
         <>
@@ -43,7 +42,8 @@ export default function NavBar() {
                         aria-labelledby={`offcanvasNavbarLabel-expand-sm`}
                         placement="end"
                         show={offCanvasNav}
-                        onHide={handleCloseOffcanvas}
+                        onHide={handleCloseNav}
+                        ref={offcanvasRef}
                     >
                         <Offcanvas.Header closeButton>
                             <Offcanvas.Title id={`offcanvasNavbarLabel-expand-sm`}>
@@ -53,27 +53,27 @@ export default function NavBar() {
                         <Offcanvas.Body>
                             <Nav className="flex-grow-1">
                                 <Nav.Item>
-                                    <Link to="/" 
-                                    className={`nav-link ${isHomePage ? 'active' : ''}`}
-                                    onClick={handleToggle}
+                                    <Link to="/"
+                                        className={`nav-link ${isHomePage ? 'active' : ''}`}
+                                        onClick={handleToggle}
                                     >Home</Link>
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <Link to="/about" 
-                                    className={`nav-link ${isAboutPage ? 'active' : ''}`}
-                                    onClick={handleToggle}
+                                    <Link to="/about"
+                                        className={`nav-link ${isAboutPage ? 'active' : ''}`}
+                                        onClick={handleToggle}
                                     >About</Link>
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <Link to="/work" 
-                                    className={`nav-link ${isWorkPage ? 'active' : ''}`}
-                                    onClick={handleToggle}
+                                    <Link to="/work"
+                                        className={`nav-link ${isWorkPage ? 'active' : ''}`}
+                                        onClick={handleToggle}
                                     >Work</Link>
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <Link to="/contact" 
-                                    className={`nav-link ${isContactPage ? 'active' : ''}`}
-                                    onClick={handleToggle}
+                                    <Link to="/contact"
+                                        className={`nav-link ${isContactPage ? 'active' : ''}`}
+                                        onClick={handleToggle}
                                     >Contact</Link>
                                 </Nav.Item>
                             </Nav>

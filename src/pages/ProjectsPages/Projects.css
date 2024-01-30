@@ -124,4 +124,12 @@
         flex-direction: column;
         gap: 0;
     }
+
+    .project-nav {
+        padding: 0 20px;
+    }
+    
+    .nav-arrow {
+        font-size: 1.2rem;
+    }
 }
