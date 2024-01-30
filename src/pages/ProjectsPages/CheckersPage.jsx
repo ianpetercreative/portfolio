@@ -32,8 +32,8 @@ export default function CheckersPage() {
                     </div>
                 </div>
                 <div className='project-buttons'>
-                    <a className='button-blue' href="https://ianpetercreative.github.io/checkers/">Deployed Site</a>
-                    <a className='button-blue' href="https://github.com/ianpetercreative/checkers">Github</a>
+                    <a className='button-blue' href="https://ianpetercreative.github.io/checkers/" target="_blank" rel="noreferrer">Deployed Site</a>
+                    <a className='button-blue' href="https://github.com/ianpetercreative/checkers" target="_blank" rel="noreferrer">Github</a>
                 </div>
                 <div className="project-screenshots">
                     <h1>Screenshots</h1>
@@ -47,8 +47,8 @@ export default function CheckersPage() {
                 </div>
                 <hr />
                 <div className='project-buttons'>
-                    <a className='button-blue' href="https://ianpetercreative.github.io/checkers/">Deployed Site</a>
-                    <a className='button-blue' href="https://github.com/ianpetercreative/checkers">Github</a>
+                    <a className='button-blue' href="https://ianpetercreative.github.io/checkers/" target="_blank" rel="noreferrer">Deployed Site</a>
+                    <a className='button-blue' href="https://github.com/ianpetercreative/checkers" target="_blank" rel="noreferrer">Github</a>
                 </div>
             </Container>
             <div className='project-nav'>

@@ -51,8 +51,8 @@ export default function SimmrPage() {
                     </div>
                 </div>
                 <div className='project-buttons'>
-                    <a className='button-blue' href="https://simmr-a4e862a95079.herokuapp.com/">Deployed Site</a>
-                    <a className='button-blue' href="https://github.com/ianpetercreative/simmr">Github</a>
+                    <a className='button-blue' href="https://simmr-a4e862a95079.herokuapp.com/" target="_blank" rel="noreferrer">Deployed Site</a>
+                    <a className='button-blue' href="https://github.com/ianpetercreative/simmr" target="_blank" rel="noreferrer">Github</a>
                 </div>
                 <div className="project-screenshots">
                     <h1>Web Screenshots</h1>
@@ -64,8 +64,8 @@ export default function SimmrPage() {
                 </div>
                 <hr />
                 <div className='project-buttons'>
-                    <a className='button-blue' href="https://simmr-a4e862a95079.herokuapp.com/">Deployed Site</a>
-                    <a className='button-blue' href="https://github.com/ianpetercreative/simmr">Github</a>
+                    <a className='button-blue' href="https://simmr-a4e862a95079.herokuapp.com/" target="_blank" rel="noreferrer">Deployed Site</a>
+                    <a className='button-blue' href="https://github.com/ianpetercreative/simmr" target="_blank" rel="noreferrer">Github</a>
                 </div>
             </Container>
                 <div className='project-nav'>
